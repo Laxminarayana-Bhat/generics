@@ -34,10 +34,10 @@ interface B {
     }
 }
 
-// ❌ Ambiguity must be resolved
+// ❌ Ambiguity must be resolved by explicitly mentioning the interface method with super keyword
 class C implements A, B {
     public void show() {
-        A.show(); // or B.super.show();
+        A.super.show(); // or B.super.show();
     }
 
 }
