@@ -11,6 +11,23 @@ public interface Constants {
 
     public static void main(String[] args) {
         System.out.println("main method in interface");
+        Dog dog=new Dog();
+        dog.sound();//dog
+        dog.callParentSound();//parent
     }//main method in interface 😲
 
+}
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+    void callParentSound() {
+        super.sound(); // Calls the method from the parent (Animal) class
+    }
 }
